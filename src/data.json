@@ -76,6 +76,17 @@
       "dueDate": "Friday",
       "priority": "Low",
       "customFields": []
+    },
+    {
+      "id": "t5",
+      "title": "Approve Q4 Budget Allocation",
+      "project": "Core Platform",
+      "assignee": "Sarah",
+      "dueDate": "Wednesday",
+      "priority": "High",
+      "customFields": [
+        { "name": "Type", "value": "Finance" }
+      ]
     }
   ],
   "recentActivity": [
