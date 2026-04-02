@@ -12,17 +12,30 @@ import {
   MoreVertical,
   Check
 } from 'lucide-react';
-import dashboardData from './data.json';
 import './index.css';
 
 const App = () => {
-  const [data, setData] = useState(dashboardData);
+  const [data, setData] = useState(null);
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    // Simulate initial loading animation
-    setTimeout(() => setLoaded(true), 100);
+    fetch('http://localhost:5001/api/dashboard')
+      .then(res => res.json())
+      .then(json => {
+        setData(json);
+        // Small delay for fade-in animation
+        setTimeout(() => setLoaded(true), 100);
+      })
+      .catch(err => console.error("Error fetching dashboard data:", err));
   }, []);
+
+  if (!data) {
+    return (
+      <div className="app-container" style={{ alignItems: 'center', justifyContent: 'center' }}>
+        <h2>Loading...</h2>
+      </div>
+    );
+  }
 
   return (
     <div className="app-container">

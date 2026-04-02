@@ -1,4 +1,10 @@
-{
+from flask import Flask, jsonify
+from flask_cors import CORS
+
+app = Flask(__name__)
+CORS(app)
+
+DATA = {
   "user": {
     "name": "Sarah Romanus",
     "role": "Engineering Manager, Core Platform",
@@ -90,3 +96,10 @@
     }
   ]
 }
+
+@app.route('/api/dashboard', methods=['GET'])
+def get_dashboard_data():
+    return jsonify(DATA)
+
+if __name__ == '__main__':
+    app.run(port=5001, debug=True)
