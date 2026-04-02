@@ -210,22 +210,7 @@ const App = () => {
                 </div>
               </div>
 
-              <div className="glass" style={{ padding: '1.5rem', flex: 1 }}>
-                <div className="card-title">
-                  <h2 style={{ margin: 0, fontSize: '1.2rem' }}>Team Activity</h2>
-                </div>
-                <div className="activity-feed">
-                  {data.recentActivity.map(item => (
-                    <div key={item.id} className="activity-item">
-                      <div className="activity-dot"></div>
-                      <div className="activity-content">
-                        <strong>{item.user}</strong> {item.action} <span className="activity-target">{item.target}</span>
-                      </div>
-                      <div className="activity-time">{item.time}</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
+
 
             </div>
           </div>

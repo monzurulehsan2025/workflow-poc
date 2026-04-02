@@ -88,28 +88,5 @@
         { "name": "Type", "value": "Finance" }
       ]
     }
-  ],
-  "recentActivity": [
-    {
-      "id": "a1",
-      "user": "Alex",
-      "action": "completed task",
-      "target": "Update component library",
-      "time": "2h ago"
-    },
-    {
-      "id": "a2",
-      "user": "Jamie",
-      "action": "commented on",
-      "target": "Custom Fields v2 Design",
-      "time": "4h ago"
-    },
-    {
-      "id": "a3",
-      "user": "Sarah",
-      "action": "created project",
-      "target": "Work Graph Expansion",
-      "time": "1d ago"
-    }
   ]
 }
